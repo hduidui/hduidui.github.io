@@ -1,6 +1,6 @@
 ---
 title: 非root用户容器安装braker过程 
-author: hduidui
+author: [hduidui]
 date: 2025-02-20 21:00:00 +0800
 categories: [bio,install]
 math: true
