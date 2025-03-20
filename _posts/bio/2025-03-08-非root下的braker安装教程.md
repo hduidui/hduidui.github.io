@@ -7,7 +7,7 @@ math: true
 tags: [生信,安装教程,braker]     # TAG names should always be lowercase非
 ---
 
-# 安装步骤
+## 安装容器
 
 安装singularity容器和构建sif文件
 
@@ -21,7 +21,7 @@ conda install conda-forge::singularity
 singularity build braker3.sif docker://teambraker/braker3:latest
 ```
 
-写shell脚本
+## 写shell脚本
 
 ```shell
 # 设置临时的环境变量BRAKER_SIF，这样就可以在任何地方运行braker3.sif
@@ -48,7 +48,7 @@ fi
 singularity exec --writable -B ${PWD}:${PWD} ${BRAKER_SIF} braker.pl --AUGUSTUS_CONFIG_PATH=/public2/huangdy/others/baiyu/Gbim/Geneanno2/02_braker3/config --genome=/tmp/Gbim/Gbim.chromosome.fa.masked  --prot_seq=/tmp/Gbim/orthologs_protein.fa --bam=/tmp/Gbim/sum.sort.bam --threads 30 --busco_lineage=insecta_odb10 --workingdir=${wd}
 ```
 
-screen运行
+## screen运行
 
 ```sh
 # 由于nohup后台运行的时候，环境变量会失效，导致程序中断，改成screen运行，screen相当于程序最小化，可以随时查看进度，由于没有root权限，需要conda安装。
